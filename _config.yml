@@ -1,0 +1,8 @@
+plugins:
+  - jekyll-protontags
+background-pattern:
+  lines-45-a
+background-primary-color:
+  '#ffffff'
+background-secondary-color:
+  '#e8e8e8'

@@ -50,3 +50,6 @@ To add a custom directory to your theme-gem, please edit the regexp in `protonth
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+## Attributions
+
+Patterns powered by PatternBolt: https://github.com/buseca/patternbolt
