@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% if page.preview-video or page.preview-description or page.gh-repo %}
 <div class="row">
     <div class="card" style="width: 120%; left: 50%; transform: translateX(-50%);">
         {% if page.preview-video %}
@@ -12,19 +13,23 @@ layout: default
         </div>
         {% endif %}
 
-        {% if page.gh-repo %}
+        {% if page.preview-description or page.gh-repo %}
         <div class="card-content">
             {% if page.preview-description %}
             <div class="row">
                 {{ page.preview-description | markdownify }}
             </div>
             {% endif %}
+            {% if page.gh-repo %}
             <div class="row" style="margin-bottom: -10px;">
                 <div class="col s6"><div class="center-align"><a href="https://github.com/{{page.gh-repo}}" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>View source on GitHub</a></div></div>
                 <div class="col s6"><div class="center-align"><a href="https://github.com/{{page.gh-repo}}/releases" class="waves-effect waves-light btn"><i class="material-icons left">file_download</i>View releases on GitHub</a></div></div>
             </div>
+            {% endif %}
         </div>
         {% endif %}
+
     </div>
 </div>
+{% endif %}
 {{ content }}
