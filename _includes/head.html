@@ -1,10 +1,10 @@
   
 <!DOCTYPE html>
 
-{% if site.page-theme %}
-{% assign theme = site.page-theme %}
-{% elsif page.theme %}
+{% if page.theme %}
 {% assign theme = page.theme %}
+{% elsif site.page-theme %}
+{% assign theme = site.page-theme %}
 {% endif %}
 
 {% if theme %}
