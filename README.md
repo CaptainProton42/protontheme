@@ -1,55 +1,104 @@
 # protontheme
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+![](assets/demo.gif)
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+**protontheme** is a *work-in-progress* [Jekyll](https://jekyllrb.com/) theme based on [Materialize](https://materializecss.com/) that I created to show off my projects and write blogs about them. With other themes, I had to use hacky solutions to include prominent video or html previews and demos of my projects at the top of my page. I felt that a theme tailored for that purpose may give me more advantages in the long run.
 
-TODO: Delete this and the text above, and describe your gem
+My plan is to continually expand this theme with the features I require. Eventually, I want to be able to use it to power a sort-of portfolio site.
 
+**Disclaimer**: This theme is a work in progress which means that it is by no means complete and its look and/or configuration options may change at any time. It is *not* ready for serious use. I mainly host it here to make integration in my GitHub pages easier.
 
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+### As a remote theme as a GitHub pages site
 
-```ruby
-gem "protontheme"
+Add to your `_config.yml`:
+```yaml
+remote-theme:
+    captainproton42/protontheme
 ```
 
-And add this line to your Jekyll site's `_config.yml`:
+*You can specifiy a branch, tag or commit by appending an `@` like `captainproton42/protontheme@v0.1.0`. See also the Jekyll Remote Theme [README](https://github.com/benbalter/jekyll-remote-theme#declaring-your-theme).*
+
+### As a remote theme with a Ruby Jekyll site
+
+Add to your `_config.yml`:
 
 ```yaml
-theme: protontheme
+plugins:
+    -jekyll-remote-theme
+remote-theme:
+    captainproton42/protontheme
 ```
 
-And then execute:
+Add `jekyll-remote-theme` to your `Gemfile` in the plugin section:
 
-    $ bundle
+```ruby
+group :jekyll_plugins do
+    gem "jekyll-remote-theme"
+end
+```
 
-Or install it yourself as:
+*You can specifiy a branch, tag or commit by appending an `@` like `captainproton42/protontheme@v0.1.0`. See also the Jekyll Remote Theme [README](https://github.com/benbalter/jekyll-remote-theme#declaring-your-theme).*
 
-    $ gem install protontheme
+# Features
 
-## Usage
+## Layouts
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+The layout of a page for a Jekyll theme can be specified in a file's YAML [front matter](https://jekyllrb.com/docs/front-matter/). Currently, *protontheme* only supports a single layout, `page`.
 
-## Contributing
+### `page`
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Layout that can be used for a blog and/or to show of a project. Allows to add a preview of your project at the top of the page and to choose a page theme.
 
-## Development
+## `page` Configuration Options
 
-To set up your environment to develop this theme, run `bundle install`.
+This is a list of all configuration options that can be added to the YAML [front matter](https://jekyllrb.com/docs/front-matter/) of a `page`. They will only affect how Jekyll renders this particular page.
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+### `title`
 
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `protontheme.gemspec` accordingly.
+The title of the page. Will be rendered as a large the top of the page, before any content.
+
+### `preview-video`
+
+Optional path to a `.mp4` file that will be displayed at the top of the page, below the title but above the content. The video will be autoplayed and looped on mute. This is good for adding a short video preview of your project.
+
+*The path should be relative to the page root (e.g. `assets/video.mp4` if `assets` is in the same directory as your `_config.yml`)*
+
+### `preview-description`
+
+Optional decription for your preview that will be visible below the preview video. Can contain markdown.
+
+### `gh-repo`
+
+Optional. `<user_name>/<repository_name>` of your project's repository. If specified, buttons that will link to your project's source and releases on GitHub will be displayed. (It is currently not possible to only display either one of these buttons.)
+
+### `theme`
+
+Specify a *page theme* for this page that will change the appearance of the page's background (powered by [PatternBolt](https://github.com/buseca/patternbolt)), buttons and code blocks.
+
+Currently available page themes:
+
+| page theme     | Description                                            |
+|----------------|--------------------------------------------------------|
+| `skybluelines` | thick lines in a 45-degree angle and light blue colors |
+| `yellobeans`   | a candy-like background with orange and yellow colos   |
+
+*I will probably add more page themes and elements affected by page themes.*
+
+## Site configuration options
+
+These options will affect *all pages* and can be added to your `_config.yml`.
+
+### `page-theme`
+
+A page theme to use for all pages (see documentation above). Will be overridden by page-specific settings.
 
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Attributions
+The theme is based on [Materialize](https://materializecss.com/) which is available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-Patterns powered by PatternBolt: https://github.com/buseca/patternbolt
+The background patterns are powered by [PatternBolt](https://github.com/buseca/patternbolt) which is available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
