@@ -13,10 +13,14 @@ $spacing-unit:     30px !default;
     margin-bottom: $spacing-unit / 2;
 }
 
-html {
-    @include pb('{{ site.background-pattern }}', 25px, {{ site.background-primary-color }}, {{ site.background-secondary-color }}, 0.5, 'none');
-}
-
 img {
     @extend .z-depth-2;
+}
+
+html.theme-skybluelines {
+    @include pb('lines-45-c', 25px, #ccfffd, #a9dbd9, 0.5, 'none');
+}
+
+html.theme-yellowbeans {
+    @include pb('candy-b', 100px, #ffed63, #ff8811, 0.5, 'none')
 }

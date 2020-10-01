@@ -1,9 +1,24 @@
   
 <!DOCTYPE html>
+
+{% if site.page-theme %}
+{% assign theme = site.page-theme %}
+{% elsif page.theme %}
+{% assign theme = page.theme %}
+{% endif %}
+
+{% if theme %}
+<html class="theme-{{ theme }}">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/theme-{{theme}}.css">
+{% else %}
 <html>
-    <head>
+  <head>
+{% endif %}
+    
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/main.css">
       <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/materialize.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
     <body>
