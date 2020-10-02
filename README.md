@@ -86,6 +86,10 @@ Currently available page themes:
 
 *I will probably add more page themes and elements affected by page themes.*
 
+### `usemath`
+
+If specified, [MathJax](https://www.mathjax.org/) will be supported on this page.
+
 ## Site configuration options
 
 These options will affect *all pages* and can be added to your `_config.yml`.
