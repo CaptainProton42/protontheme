@@ -43,6 +43,23 @@ end
 
 # Features
 
+## Plugin-less markup
+
+The theme's `_config.yml` contains site variables which allow custom markup for pages without the need for plugins (which guarantess compatibility with providers that run Jekyll in safe mdoe e.g. GitHub pages).
+
+### Infoboxes
+
+Infoboxes are nice for including additional information on a topic. They are a different color and have a capitalized title. They can be added as follows:
+
+```
+{{ site.openInfoBox }}
+{{ site.openInfoBoxTitle }}
+Title of the info box
+{{ site.closeInfoBoxTitle }}
+Content of the info box
+{{ site.closeInfoBox }}
+```
+
 ## Layouts
 
 The layout of a page for a Jekyll theme can be specified in a file's YAML [front matter](https://jekyllrb.com/docs/front-matter/). Currently, *protontheme* only supports a single layout, `page`.
