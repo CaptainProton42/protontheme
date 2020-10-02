@@ -14,6 +14,10 @@ $spacing-unit:     30px !default;
     margin-bottom: $spacing-unit / 2;
 }
 
+div br {
+    display: none;
+}
+
 img {
     @extend .z-depth-2;
 }
