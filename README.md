@@ -45,7 +45,7 @@ end
 
 ## Plugin-less markup
 
-**Disclaimer**: Plugin-less markup functions only on Jekyll 4.0 and above. Since GitHub pages is still using an older version, you will have to add the neccessary site variables to your site's `_config.yml` yourself. For instructions, read [Plugin-less markup on GitHub pages](#plugin-less-markup-on-github-pages).
+***Disclaimer**: Plugin-less markup functions only on Jekyll 4.0 and above. Since GitHub pages is still using an older version, you will have to add the neccessary site variables to your site's `_config.yml` yourself. For instructions, read [Plugin-less markup on GitHub pages](#plugin-less-markup-on-github-pages).*
 
 The theme's `_config.yml` contains site variables which allow custom markup for pages without the need for plugins (which guarantess compatibility with providers that run Jekyll in safe mdoe e.g. GitHub pages).
 
