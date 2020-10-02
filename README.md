@@ -45,6 +45,8 @@ end
 
 ## Plugin-less markup
 
+**Disclaimer**: Plugin-less markup functions only on Jekyll 4.0 and above. Since GitHub pages is still using an older version, you will have to add the neccessary site variables to your site's `_config.yml` yourself. For instructions, read [Plugin-less markup on GitHub pages](#plugin-less-markup-on-github-pages).
+
 The theme's `_config.yml` contains site variables which allow custom markup for pages without the need for plugins (which guarantess compatibility with providers that run Jekyll in safe mdoe e.g. GitHub pages).
 
 ### Infoboxes
@@ -114,6 +116,19 @@ These options will affect *all pages* and can be added to your `_config.yml`.
 ### `page-theme`
 
 A page theme to use for all pages (see documentation above). Will be overridden by page-specific settings.
+
+## Plugin-less markup on GitHub pages
+
+Copy the following lines and add them anywhere in your site's `_config.yml`:
+
+```YAML
+openInfoBox: "<div markdown='1' class='card-panel blue lighten-4'>"
+closeInfoBox: "</div>"
+openInfoBoxTitle: "<div class='blue-text text-bold text-darken-2' style='padding-bottom: 1em; font-weight: bold; text-transform: uppercase;'>"
+closeInfoBoxTitle: "</div>"
+```
+
+Plugin-less markup should then work on your GitHub pages site.
 
 ## License
 
