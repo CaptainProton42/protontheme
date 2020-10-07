@@ -1,5 +1,4 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
 @import "syntax-highlighting";
@@ -14,10 +13,34 @@ $spacing-unit:     30px !default;
     margin-bottom: $spacing-unit / 2;
 }
 
+/************************************
+ * Do not display line breaks after *
+ * divs (mostly line breaks after   *
+ * after liquid tags                *
+ ************************************/
+
 div br {
     display: none;
 }
 
+/******************************
+ * Add a shadow behind images *
+ ******************************/
+
 img {
     @extend .z-depth-2;
+}
+
+/*************************
+ * Info Boxes base style *
+ *************************/
+
+.infobox {
+    @extend .card-panel;
+}
+
+.infobox-title {
+    padding-bottom: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
 }

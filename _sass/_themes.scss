@@ -1,6 +1,9 @@
 @import "patternbolt";
 
-// skybluelines
+/****************
+ * skybluelines *
+ ****************/
+
 html.theme-skybluelines {
     @include pb('lines-45-c', 25px, #ccfffd, #a9dbd9, 0.5, 'none');
     
@@ -22,7 +25,10 @@ html.theme-skybluelines {
     }
 }
 
-// yellowbeans
+/***************
+ * yellowbeans *
+ ***************/
+ 
 html.theme-yellowbeans {
     @include pb('candy-b', 100px, #ffed63, #ff8811, 0.5, 'none');
 
