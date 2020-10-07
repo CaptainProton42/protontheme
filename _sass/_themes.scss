@@ -1,0 +1,45 @@
+@import "patternbolt";
+
+// skybluelines
+html.theme-skybluelines {
+    @include pb('lines-45-c', 25px, #ccfffd, #a9dbd9, 0.5, 'none');
+    
+    .btn {
+        background-color: #45a3b0 !important;
+        color: #ffffff !important;
+    }
+
+    .highlighter-rouge .highlight {
+        background-color: #d7f2f5 !important;
+    }
+
+    .infobox {
+        background-color: #d7f2f5 !important;
+    }
+
+    .infobox-title {
+        color: #45a3b0 !important;
+    }
+}
+
+// yellowbeans
+html.theme-yellowbeans {
+    @include pb('candy-b', 100px, #ffed63, #ff8811, 0.5, 'none');
+
+    .btn {
+        background-color:#ffed63 !important;
+        color:  #ff8811 !important;
+    }
+    
+    .highlighter-rouge .highlight {
+        background-color: #fff8bf !important;
+    }
+    
+    .infobox {
+        background-color: #fff8bf;
+    }
+    
+    .infobox-title {
+        color: #ff8811;
+    }
+}

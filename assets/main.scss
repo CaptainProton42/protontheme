@@ -2,9 +2,9 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "patternbolt";
 @import "syntax-highlighting";
 @import "materialize";
+@import "themes";
 
 // Syntax highlighting sass properties and inclusion
 $base-font-size: 1em;
@@ -20,14 +20,4 @@ div br {
 
 img {
     @extend .z-depth-2;
-}
-
-html.theme-skybluelines {
-    @include pb('lines-45-c', 25px, #ccfffd, #a9dbd9, 0.5, 'none');
-    @import "_theme_yellowbeans";
-}
-
-html.theme-yellowbeans {
-    @include pb('candy-b', 100px, #ffed63, #ff8811, 0.5, 'none');
-    @import "_theme_skybluelines";
 }
