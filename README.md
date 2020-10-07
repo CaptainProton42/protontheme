@@ -51,7 +51,7 @@ The theme's `_config.yml` contains site variables which allow custom markup for 
 
 ### Infoboxes
 
-Infoboxes are nice for including additional information on a topic. They are a different color and have a capitalized title. They can be added as follows:
+Infoboxes are nice for including additional information on a topic without interrupting the flow of an article. They are a different color and have a uppercase title. They can be added as follows:
 
 ```
 {{ site.openInfoBox }}
@@ -98,12 +98,12 @@ Specify a *page theme* for this page that will change the appearance of the page
 
 Currently available page themes:
 
-| page theme     | Description                                            |
-|----------------|--------------------------------------------------------|
-| `skybluelines` | thick lines in a 45-degree angle and light blue colors |
-| `yellobeans`   | a candy-like background with orange and yellow colos   |
+| page theme     | Description                                             |
+|----------------|---------------------------------------------------------|
+| `skybluelines` | thick lines in a 45-degree angle with light blue colors |
+| `yellowbeans`  | a candy-like background with orange and yellow colos    |
 
-*I will probably add more page themes and elements affected by page themes.*
+*I will probably add more page themes as time progresses.*
 
 ### `usemath`
 
@@ -119,12 +119,12 @@ A page theme to use for all pages (see documentation above). Will be overridden 
 
 ## Plugin-less markup on GitHub pages
 
-Copy the following lines and add them anywhere in your site's `_config.yml`:
+Since GitHub pages uses a Jekyll version < 3.0, inheriting `_config.yml` from this repository will not work. Copy the following lines and add them anywhere in your site's `_config.yml`:
 
 ```YAML
-openInfoBox: "<div markdown='1' class='card-panel blue lighten-4'>"
+openInfoBox: "<div markdown='1' class='infobox'>"
 closeInfoBox: "</div>"
-openInfoBoxTitle: "<div class='blue-text text-bold text-darken-2' style='padding-bottom: 1em; font-weight: bold; text-transform: uppercase;'>"
+openInfoBoxTitle: "<div class='infobox-title'>"
 closeInfoBoxTitle: "</div>"
 ```
 
