@@ -94,14 +94,15 @@ Optional. `<user_name>/<repository_name>` of your project's repository. If speci
 
 ### `theme`
 
-Specify a *page theme* for this page that will change the appearance of the page's background (powered by [PatternBolt](https://github.com/buseca/patternbolt)), buttons and code blocks.
+Specify a *page theme* for this page that will change the appearance of the page's background, buttons, code blocks and info boxes.
 
 Currently available page themes:
 
 | page theme     | Description                                             |
 |----------------|---------------------------------------------------------|
 | `skybluelines` | thick lines in a 45-degree angle with light blue colors |
-| `yellowbeans`  | a candy-like background with orange and yellow colos    |
+| `yellowcandy`  | a candy-like background with orange and yellow colors   |
+| `firered`      | a flame-like background with orange-red colors          |
 
 *I will probably add more page themes as time progresses.*
 
@@ -137,4 +138,4 @@ The theme is available as open source under the terms of the [MIT License](https
 ## Attributions
 The theme is based on [Materialize](https://materializecss.com/) which is available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-The background patterns are powered by [PatternBolt](https://github.com/buseca/patternbolt) which is available under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The background patterns are powered by [DOODAD.DEV's pattern generator](https://doodad.dev/pattern-generator).
