@@ -6,7 +6,7 @@
 
  // Add a shadow behind code blocks
  div.highlighter-rouge {
-    @extend .z-depth-2;
+    @extend .z-depth-1;
  }
 
  .highlight {

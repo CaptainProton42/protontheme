@@ -100,9 +100,9 @@ Currently available page themes:
 
 | page theme     | Description                                             |
 |----------------|---------------------------------------------------------|
-| `skybluelines` | thick lines in a 45-degree angle with light blue colors |
-| `yellowcandy`  | a candy-like background with orange and yellow colors   |
-| `firered`      | a flame-like background with orange-red colors          |
+| `sky-blue`     | thick lines in a 45-degree angle with light blue colors |
+| `yellow-candy` | a candy-like background with orange and yellow colors   |
+| `red-flames`   | a flame-like background with orange-red colors          |
 
 *I will probably add more page themes as time progresses.*
 
