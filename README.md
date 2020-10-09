@@ -54,17 +54,17 @@ The theme's `_config.yml` contains site variables which allow custom markup for 
 Infoboxes are nice for including additional information on a topic without interrupting the flow of an article. They are a different color and have a uppercase title. They can be added as follows:
 
 ```
-{{ site.openInfoBox }}
-{{ site.openInfoBoxTitle }}
+{{ site.beginInfoBox }}
+{{ site.beginInfoBoxTitle }}
 Title of the info box
-{{ site.closeInfoBoxTitle }}
+{{ site.endInfoBoxTitle }}
 Content of the info box
-{{ site.closeInfoBox }}
+{{ site.endInfoBox }}
 ```
 
 ### Figures
 
-Figures can be used to quickly create centered elements on your page. You can also add optional caption which will be automatically numbered. Figures and figure captions also support HTML and markdown content. The example below adds a captioned image:
+Figures can be used to quickly create centered elements on your page. You can also add optional caption which will be automatically numbered. Figures and figure captions support HTML and markdown content. The example below adds a captioned image:
 
 ```
 {{ site.beginFigure }}
