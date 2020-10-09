@@ -11,6 +11,10 @@ layout: default
                 <source src="{{page.preview-video}}" type="video/mp4">
             </video>
         </div>
+        {% elsif page.preview-html %}
+        <div class="card-image">
+            <iframe src="{{page.preview-html}}" width="100%"></iframe>
+        </div>
         {% endif %}
 
         {% if page.preview-description or page.gh-repo %}
