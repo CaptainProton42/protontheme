@@ -62,6 +62,19 @@ Content of the info box
 {{ site.closeInfoBox }}
 ```
 
+### Figures
+
+Figures can be used to quickly create centered elements on your page. You can also add optional caption which will be automatically numbered. Figures and figure captions also support HTML and markdown content. The example below adds a captioned image:
+
+```
+{{ site.beginFigure }}
+<img width="50%" src='image.png'>
+{{ site.beginCaption}}
+Figure caption.
+{{ site.endCaption }}
+{{ site.endFigure }}
+```
+
 ## Layouts
 
 The layout of a page for a Jekyll theme can be specified in a file's YAML [front matter](https://jekyllrb.com/docs/front-matter/). Currently, *protontheme* only supports a single layout, `page`.
