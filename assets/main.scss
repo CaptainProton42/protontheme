@@ -53,3 +53,21 @@ img {
     @extend .card-panel;
     @extend .center-align;
 }
+
+/***********
+ * Figures *
+ ***********/
+
+body {
+    counter-reset: figure-counter;
+}
+  
+.figure-caption::before {
+    counter-increment: figure-counter;
+    content: "Figure " counter(figure-counter) ": ";
+    font-weight: bold;
+}
+
+.figure {
+    @extend .center-align;
+}

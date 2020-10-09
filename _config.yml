@@ -1,6 +1,11 @@
 #page-theme: skybluelines
 
-openInfoBox: "<div markdown='1' class='infobox'>"
-closeInfoBox: "</div>"
-openInfoBoxTitle: "<div class='infobox-title'>"
-closeInfoBoxTitle: "</div>"
+beginInfoBox: "<div markdown='1' class='infobox'>"
+endInfoBox: "</div>"
+beginInfoBoxTitle: "<div class='infobox-title'>"
+endInfoBoxTitle: "</div>"
+
+beginFigure: "<div class='figure'>"
+endFigure: "</div>"
+beginCaption: "<p class='figure-caption'>"
+endCaption: "</p>"
