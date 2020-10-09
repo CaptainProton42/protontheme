@@ -71,3 +71,10 @@ body {
 .figure {
     @extend .center-align;
 }
+
+/*******************
+ * Wrap code lines *
+ *******************/
+ code {
+    white-space: pre-wrap
+  }
