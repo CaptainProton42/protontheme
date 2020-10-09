@@ -98,11 +98,12 @@ Specify a *page theme* for this page that will change the appearance of the page
 
 Currently available page themes:
 
-| page theme     | Description                                             |
-|----------------|---------------------------------------------------------|
-| `sky-blue`     | thick lines in a 45-degree angle with light blue colors |
-| `yellow-candy` | a candy-like background with orange and yellow colors   |
-| `red-flames`   | a flame-like background with orange-red colors          |
+| page theme      | Description                                             |
+|-----------------|---------------------------------------------------------|
+| `sky-blue`      | thick lines in a 45-degree angle with light blue colors |
+| `yellow-candy`  | a candy-like background with orange and yellow colors   |
+| `red-flames`    | a flame-like background with orange-red colors          |
+| `green-meadows` | light green colors and background                       |
 
 *I will probably add more page themes as time progresses.*
 

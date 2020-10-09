@@ -44,3 +44,12 @@ img {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+/**********
+ * Footer *
+ **********/
+
+.footer {
+    @extend .card-panel;
+    @extend .center-align;
+}
