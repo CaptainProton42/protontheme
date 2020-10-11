@@ -105,6 +105,10 @@ Optional decription for your preview that will be visible below the preview vide
 
 Optional. `<user_name>/<repository_name>` of your project's repository. If specified, buttons that will link to your project's source and releases on GitHub will be displayed. (It is currently not possible to only display either one of these buttons.)
 
+### `gh-norelease`
+
+If `true`, the button linking to the GitHub repository's releases page will be omittet. Has no effect if `gh-repo` is not specified.
+
 ### `theme`
 
 Specify a *page theme* for this page that will change the appearance of the page's background, buttons, code blocks and info boxes.
@@ -122,7 +126,7 @@ Currently available page themes:
 
 ### `usemath`
 
-If specified, [MathJax](https://www.mathjax.org/) will be supported on this page.
+If `true`, [MathJax](https://www.mathjax.org/) will be supported on this page.
 
 ## Site configuration options
 
