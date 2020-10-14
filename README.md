@@ -117,7 +117,7 @@ Currently available page themes:
 
 | page theme      | Description                                             |
 |-----------------|---------------------------------------------------------|
-| `sky-blue`      | thick lines in a 45-degree angle with light blue colors |
+| `blue-sky`      | thick lines in a 45-degree angle with light blue colors |
 | `yellow-candy`  | a candy-like background with orange and yellow colors   |
 | `red-flames`    | a flame-like background with orange-red colors          |
 | `green-meadows` | light green colors and background                       |
@@ -127,6 +127,26 @@ Currently available page themes:
 ### `usemath`
 
 If `true`, [MathJax](https://www.mathjax.org/) will be supported on this page.
+
+## Common Post Options
+
+These options can be specified in the front matter of every post (regardless of layout) and will affect how it is displayed on the home page.
+
+### `thumbnail-image`
+
+An image that will be shown on the post's card on the home page.
+
+### `thumbnail-video`
+
+A video that will be muted and autoplayed on the post's card on the home page. Currently only supports MP4 files.
+
+### `external-url`
+
+If specified, the home page will link to this URL instead of the actual post URL. Use empty posts with this in the front matter to link to external sites.
+
+### `summary`
+
+A short summary that will be displayed as a reveal element in the post's card on the home page.
 
 ## Site configuration options
 

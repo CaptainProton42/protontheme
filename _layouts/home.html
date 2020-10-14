@@ -1,23 +1,48 @@
 {% include head.html %}
 
-<div class="container" style="max-width: 70em;">
-  {% for post in site.posts %}
-    <div class="col s12 m6 l3">
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <div class="card">
-        <div class="card-image">
-          <img src="images/sample-1.jpg">
-          <div class="card-content">
-            <span class="card-title">{{ post.title }}</span>
+<div class="container">
+  {% for category in site.categories %}
+  <h3 class="card-panel">{{ category[0] }}</h3>
+  <div class="row">
+  {% for post in category[1] %}
+    <div class="col s12 m6">
+      <div class="card sticky-action">
+        
+        <div class="card-image waves-effect waves-block waves-light">
+          <div class="aspect-ratio activator">
+            {% if post.thumbnail-image %}
+            <img src="{{ post.thumbnail-image }}">
+            {% elsif post.thumbnail-video %}
+            <video class="activator" width="100%" muted autoplay loop>
+              <source src="{{ post.thumbnail-video }}" type="video/mp4">
+            </video>
+            {% endif %}
+            {% if post.summary %}
+            <i class="material-icons small white-text" style="position:absolute; top:10px; right:10px;">info_outline</i>
+            {% endif %}
+            <span class="card-title activator">{{ post.title }}</span>
           </div>
+        </div>
+        {% if post.summary %}
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
+          <p>{{ post.summary | markdownify }}</p>
+        </div>
+        {% endif %}
+        <div class="card-action">
+          {% if post.external-url %}
+          <a href="{{ post.external-url }}">View <i class="tiny material-icons">launch</i></a>
+          {% else %}
+          <a href="{{ post.url }}">View</a>
+          {% endif %}
           {% if post.gh-repo %}
-          <div class="card-action">
-            <a href="https://github.com/{{ post.gh-repo }}">Source on GitHub</a>
-          </div>
+          <a href="https://github.com/{{ post.gh-repo }}">GitHub <i class="tiny material-icons">launch</i></a>
           {% endif %}
         </div>
       </div>
     </div>
+  {% endfor %}
+  </div>
   {% endfor %}
 </div>
 

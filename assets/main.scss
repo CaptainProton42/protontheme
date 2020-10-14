@@ -79,9 +79,9 @@ body {
     white-space: pre-wrap
   }
 
-/**************************
- * 16:9 aspect for iframe *
- **************************/
+/****************************************
+ * 16:9 aspect for iframe and thumbnail *
+ ****************************************/
 
 // Thanks to SimonSimCity: https://stackoverflow.com/a/35153397
 
@@ -98,4 +98,12 @@ body {
     height: 100%;
     left: 0;
     top: 0;
+}
+
+/**********************
+ * Fix icon alignment *
+ **********************/
+
+.material-icons {
+    vertical-align: middle;
 }
