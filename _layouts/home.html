@@ -1,50 +1,64 @@
 {% include head.html %}
 
+{% include navbar.html %}
+
 <div class="container">
-  {% for category in site.categories %}
-  <h3 class="card-panel">{{ category[0] }}</h3>
-  <div class="row">
-  {% for post in category[1] %}
-    <div class="col s12 m6">
-      <div class="card sticky-action">
-        
-        <div class="card-image waves-effect waves-block waves-light">
-          <div class="thumbnail aspect-ratio activator">
-            {% if post.thumbnail-image %}
-            <img class="activator" src="{{ post.thumbnail-image }}">
-            {% elsif post.thumbnail-video %}
-            <video class="responsive-video activator" width="100%" muted autoplay loop>
-              <source src="{{ post.thumbnail-video }}" type="video/mp4">
-            </video>
-            {% endif %}
+  <div class="card-panel">
+    <div class="center-align">
+      <h1>{{ site.title }}</h1>
+      <hr class="small">
+      <h4 class="grey-text">{{ site.subtitle }}</h4>
+    </div>
+    <div class="divider"></div>
+    <div class="section">{{ content }}</div>
+    {% for category in site.categories %}
+    <div class="divider"></div>
+    <div class="section">
+      <h3>{{ category[0] }}</h3>
+      <div class="row">
+      {% for post in category[1] %}
+        <div class="col s12 m6">
+          <div class="card sticky-action">
+            
+            <div class="card-image waves-effect waves-block waves-light">
+              <div class="thumbnail aspect-ratio activator">
+                {% if post.thumbnail-image %}
+                <img class="activator" src="{{ post.thumbnail-image }}">
+                {% elsif post.thumbnail-video %}
+                <video class="responsive-video activator" width="100%" muted autoplay loop>
+                  <source src="{{ post.thumbnail-video }}" type="video/mp4">
+                </video>
+                {% endif %}
+              </div>
+              <span class="card-title activator">{{ post.title }}</span>
+            </div>
+            
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
+              {% if post.summary %}
+              <p>{{ post.summary | markdownify }}</p>
+              {% endif %}
+              {% for tag in post.tags %}
+                <span class="new badge" data-badge-caption="{{ tag }}"></span>
+              {% endfor %}
+            </div>
+            <div class="card-action">
+              {% if post.external-url %}
+              <a href="{{ post.external-url }}" style="font-weight: bold;">View <i class="tiny material-icons">launch</i></a>
+              {% else %}
+              <a href="{{ post.url }}" style="font-weight: bold;">View</a>
+              {% endif %}
+              {% if post.gh-repo %}
+              <a href="https://github.com/{{ post.gh-repo }}">GitHub <i class="tiny material-icons">launch</i></a>
+              {% endif %}
+            </div>
           </div>
-          <span class="card-title activator">{{ post.title }}</span>
         </div>
-        
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
-          {% if post.summary %}
-          <p>{{ post.summary | markdownify }}</p>
-          {% endif %}
-          {% for tag in post.tags %}
-            <span class="new badge" data-badge-caption="{{ tag }}"></span>
-          {% endfor %}
-        </div>
-        <div class="card-action">
-          {% if post.external-url %}
-          <a href="{{ post.external-url }}" style="font-weight: bold;">View <i class="tiny material-icons">launch</i></a>
-          {% else %}
-          <a href="{{ post.url }}" style="font-weight: bold;">View</a>
-          {% endif %}
-          {% if post.gh-repo %}
-          <a href="https://github.com/{{ post.gh-repo }}">GitHub <i class="tiny material-icons">launch</i></a>
-          {% endif %}
-        </div>
+      {% endfor %}
       </div>
     </div>
-  {% endfor %}
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
 {% include footer.html %}

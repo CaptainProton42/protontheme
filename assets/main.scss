@@ -124,3 +124,16 @@ body {
     filter: grayscale(0%);
     filter: brightness(100%);
 }
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+hr.small {
+    max-width: 6.25rem;
+    margin: 1rem auto;
+    border-width: 0.25rem;
+    border-color: inherit;
+    border-radius: 0.1875rem;
+}
