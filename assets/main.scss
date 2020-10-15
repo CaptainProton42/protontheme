@@ -111,10 +111,16 @@ body {
 /***************************
  * Thumbnail zoom on hover *
  ***************************/
- 
+
 .thumbnail {
-    transition: transform 1s ease;
+    transition: transform 1s ease, filter 1s ease;
+    transform: scale(1.2);
+    filter: grayscale(50%);
+    filter: brightness(60%);
 }
+
 .thumbnail:hover {
-    transform: scale(1.2,1.2);
+    transform: scale(1.0);
+    filter: grayscale(0%);
+    filter: brightness(100%);
 }

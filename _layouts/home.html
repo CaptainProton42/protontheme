@@ -11,24 +11,25 @@
         <div class="card-image waves-effect waves-block waves-light">
           <div class="thumbnail aspect-ratio activator">
             {% if post.thumbnail-image %}
-            <img src="{{ post.thumbnail-image }}">
+            <img class="activator" src="{{ post.thumbnail-image }}">
             {% elsif post.thumbnail-video %}
             <video class="responsive-video activator" width="100%" muted autoplay loop>
               <source src="{{ post.thumbnail-video }}" type="video/mp4">
             </video>
             {% endif %}
           </div>
-            {% if post.summary %}
-            <i class="material-icons small white-text" style="position:absolute; top:10px; right:10px;">info_outline</i>
-            {% endif %}
-            <span class="card-title activator">{{ post.title }}</span>
+          <span class="card-title activator">{{ post.title }}</span>
         </div>
-        {% if post.summary %}
+        
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">{{ post.title }}<i class="material-icons right">close</i></span>
+          {% if post.summary %}
           <p>{{ post.summary | markdownify }}</p>
+          {% endif %}
+          {% for tag in post.tags %}
+            <span class="new badge" data-badge-caption="{{ tag }}"></span>
+          {% endfor %}
         </div>
-        {% endif %}
         <div class="card-action">
           {% if post.external-url %}
           <a href="{{ post.external-url }}" style="font-weight: bold;">View <i class="tiny material-icons">launch</i></a>
