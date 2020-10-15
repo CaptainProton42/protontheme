@@ -9,19 +9,19 @@
       <div class="card sticky-action">
         
         <div class="card-image waves-effect waves-block waves-light">
-          <div class="aspect-ratio activator">
+          <div class="thumbnail aspect-ratio activator">
             {% if post.thumbnail-image %}
             <img src="{{ post.thumbnail-image }}">
             {% elsif post.thumbnail-video %}
-            <video class="activator" width="100%" muted autoplay loop>
+            <video class="responsive-video activator" width="100%" muted autoplay loop>
               <source src="{{ post.thumbnail-video }}" type="video/mp4">
             </video>
             {% endif %}
+          </div>
             {% if post.summary %}
             <i class="material-icons small white-text" style="position:absolute; top:10px; right:10px;">info_outline</i>
             {% endif %}
             <span class="card-title activator">{{ post.title }}</span>
-          </div>
         </div>
         {% if post.summary %}
         <div class="card-reveal">
@@ -31,9 +31,9 @@
         {% endif %}
         <div class="card-action">
           {% if post.external-url %}
-          <a href="{{ post.external-url }}">View <i class="tiny material-icons">launch</i></a>
+          <a href="{{ post.external-url }}" style="font-weight: bold;">View <i class="tiny material-icons">launch</i></a>
           {% else %}
-          <a href="{{ post.url }}">View</a>
+          <a href="{{ post.url }}" style="font-weight: bold;">View</a>
           {% endif %}
           {% if post.gh-repo %}
           <a href="https://github.com/{{ post.gh-repo }}">GitHub <i class="tiny material-icons">launch</i></a>
