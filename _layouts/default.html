@@ -1,5 +1,9 @@
 {% include head.html %}
 
+{% if page.disable-navbar == nil or page.disable-navbar == false %}
+{% include navbar.html %}
+{% endif %}
+
 <div class="container" style="max-width: 70em;">
     <div class="card-panel">
         <div class="valign-wrapper">

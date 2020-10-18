@@ -4,6 +4,7 @@
 @import "syntax-highlighting";
 @import "materialize";
 @import "themes";
+@import "animate";
 
 // Syntax highlighting sass properties and inclusion
 $base-font-size: 1em;
@@ -125,6 +126,10 @@ body {
     filter: brightness(100%);
 }
 
+/************************
+ * Thick, short divider *
+ ************************/
+
 hr {
     border: 0;
     border-top: 1px solid rgba(0,0,0,.1);
@@ -136,4 +141,27 @@ hr.small {
     border-width: 0.25rem;
     border-color: inherit;
     border-radius: 0.1875rem;
+}
+
+/****************************
+ * Adjust anchor for navbar *
+ ****************************/
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -60px;
+    visibility: hidden;
+}
+
+/****************************
+ * jello animation on hover *
+ ****************************/
+
+.hover-jello:hover {
+    @extend .animate__animated, .animate__jello;
+}
+
+.nav-hover-jello:hover .text{
+    @extend .animate__animated, .animate__jello;
 }

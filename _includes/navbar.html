@@ -3,9 +3,16 @@
     <nav>
       <div class="nav-wrapper bg-dark">
         <div class="col s12">
-          <a href="" class="brand-logo">
+          <a href="{{site.url}}" class="brand-logo">
             {{ site.title }}
           </a>
+          {% if site.navbar-links %}
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% for link in site.navbar-links %}
+            <li><a class="nav-hover-jello" href="{{ link[1] }}"><div class="text">{{ link[0] }}</div></a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </div>
       </div>
     </nav>
