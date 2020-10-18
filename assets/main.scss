@@ -109,23 +109,6 @@ body {
     vertical-align: middle;
 }
 
-/***************************
- * Thumbnail zoom on hover *
- ***************************/
-
-.thumbnail {
-    transition: transform 1s ease, filter 1s ease;
-    transform: scale(1.2);
-    filter: grayscale(50%);
-    filter: brightness(60%);
-}
-
-.thumbnail:hover {
-    transform: scale(1.0);
-    filter: grayscale(0%);
-    filter: brightness(100%);
-}
-
 /************************
  * Thick, short divider *
  ************************/
@@ -164,4 +147,44 @@ a.anchor {
 
 .nav-hover-jello:hover .text{
     @extend .animate__animated, .animate__jello;
+}
+
+/*****************************
+ * Interactive post previews *
+ *****************************/
+
+ .post-preview .thumbnail {
+    transition: transform 1s ease, filter 1s ease;
+    transform: scale(1.0);
+    filter: grayscale(0%);
+    filter: brightness(100%);
+}
+
+.post-preview:hover .thumbnail {
+    transform: scale(1.2);
+    filter: grayscale(50%);
+    filter: brightness(50%);
+}
+
+.post-preview .post-summary {
+    @extend .card-content;
+    @extend .white-text;
+    position: absolute;
+    z-index: 99;
+    transition: opacity 1s ease;
+    opacity: 0.0;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.post-preview:hover .post-summary {
+    opacity: 1.0;
+}
+
+.post-tags {
+    width:100%;
+    height: 20%;
+    top: -0.5em;
+    right: -0.5em;
 }
