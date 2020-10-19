@@ -101,6 +101,13 @@ body {
     top: 0;
 }
 
+.aspect-ratio img {
+    position: absolute !important;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 /**********************
  * Fix icon alignment *
  **********************/
