@@ -148,6 +148,10 @@ If specified, the home page will link to this URL instead of the actual post URL
 
 A short summary that will be displayed as a reveal element in the post's card on the home page.
 
+### `disable-navbar`
+
+If `true`, the navbar will not be displayed on this page.
+
 ## Site configuration options
 
 These options will affect *all pages* and can be added to your `_config.yml`.
@@ -155,6 +159,37 @@ These options will affect *all pages* and can be added to your `_config.yml`.
 ### `page-theme`
 
 A page theme to use for all pages (see documentation above). Will be overridden by page-specific settings.
+
+### `title`
+
+The title of the web *site*. Will be shown on the navbar (if enabled) on all pages.
+
+### `subtitle`
+
+Will be shown below the title on the `home` page.
+
+### `social`
+
+Social media handles. Currently supports `twitter`, `github`, `itchio` and `reddit`. Example usage:
+
+```YAML
+social:
+  twitter: captainproton42
+  github: captainproton42
+  reddit: captainproton42
+  itchio: captainproton42
+```
+
+### `navbar-links`
+
+Links (and labels) that will be displayed on the right in the navbar. Example usage:
+
+```YAML
+navbar-links:
+  About me : "/#subtitle"
+  Projects: "/#posts"
+  Resumé: "resume"
+```
 
 ## Plugin-less markup on GitHub pages
 
