@@ -6,9 +6,11 @@
 
 <div class="container" style="max-width: 70em;">
     <div class="card-panel">
+        {% if page.title %}
         <div class="valign-wrapper">
             <h1 class="center-align">{{page.title}}</h1>
         </div>
+        {% endif %}
         {{ content }}
     </div>
 </div>
