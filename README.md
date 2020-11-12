@@ -196,10 +196,15 @@ navbar-links:
 Since GitHub pages uses a Jekyll version < 3.0, inheriting `_config.yml` from this repository will not work. Copy the following lines and add them anywhere in your site's `_config.yml`:
 
 ```YAML
-openInfoBox: "<div markdown='1' class='infobox'>"
-closeInfoBox: "</div>"
-openInfoBoxTitle: "<div class='infobox-title'>"
-closeInfoBoxTitle: "</div>"
+beginInfoBox: "<div markdown='1' class='infobox'>"
+endInfoBox: "</div>"
+beginInfoBoxTitle: "<div class='infobox-title'>"
+endInfoBoxTitle: "</div>"
+
+beginFigure: "<div markdown='1' class='figure'>"
+endFigure: "</div>"
+beginCaption: "<p markdown='1' class='figure-caption'>"
+endCaption: "</p>"
 ```
 
 Plugin-less markup should then work on your GitHub pages site.
