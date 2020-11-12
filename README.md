@@ -83,6 +83,12 @@ The layout of a page for a Jekyll theme can be specified in a file's YAML [front
 
 Layout that can be used for a blog and/or to show of a project. Allows to add a preview of your project at the top of the page and to choose a page theme.
 
+### `home`
+
+The home page. Allows you to write something about yourself, add social links and displays previews and links of your projects and/or blog entries.
+
+***Disclaimer:** This is not completely ready to be used yet as it still contains some code that is specifically tailored to my GitHub page.*
+
 ## `page` Configuration Options
 
 This is a list of all configuration options that can be added to the YAML [front matter](https://jekyllrb.com/docs/front-matter/) of a `page`. They will only affect how Jekyll renders this particular page.
