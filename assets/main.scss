@@ -218,3 +218,15 @@ a.anchor {
     top: -0.5em;
     right: -0.5em;
 }
+
+/************************************
+ * Fix materialize css bullet lists *
+ ************************************/
+
+ul {
+    padding-left: revert !important;
+}
+
+li {
+    list-style-type: initial !important;
+}
