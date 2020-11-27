@@ -223,10 +223,10 @@ a.anchor {
  * Fix materialize css bullet lists *
  ************************************/
 
-ul {
+ul:not(nav) {
     padding-left: revert !important;
 }
 
-li {
+li:not(nav) {
     list-style-type: initial !important;
 }
