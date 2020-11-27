@@ -3,7 +3,7 @@
 {% if page.disable-navbar == nil or page.disable-navbar == false %}
 {% include navbar.html %}
 {% endif %}
-
+<div class="page-content">
 <div class="container" style="max-width: 70em;">
     <div class="card-panel">
         {% if page.title %}
@@ -13,6 +13,7 @@
         {% endif %}
         {{ content }}
     </div>
+</div>
 </div>
 
 {% include footer.html %}
