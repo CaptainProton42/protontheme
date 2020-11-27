@@ -1,9 +1,10 @@
-
+{% for categoryName in page.categories %}
     {% for category in site.categories %}
+    {% if category[0] == categoryName %}
     <div class="divider"></div>
     <div class="section">
       <div class="center-align">
-        <h4>{{ category[1] }}</h4>
+        <h4>{{ category[0] }}</h4>
       </div>
       <div class="row">
       {% for post in category[1] %}
@@ -53,4 +54,6 @@
       {% endfor %}
       </div>
     </div>
+    {% endif %}
     {% endfor %}
+{% endfor %}
