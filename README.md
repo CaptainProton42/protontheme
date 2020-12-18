@@ -197,6 +197,16 @@ navbar-links:
   Resumé: "resume"
 ```
 
+## `home` Configuration Options
+
+### `postlist-title`
+
+Title to display above the post list/project showcase.
+
+### `postlist-description`
+
+A short description to display above the post list/project showcase.
+
 ## Plugin-less markup on GitHub pages
 
 Since GitHub pages uses a Jekyll version < 3.0, inheriting `_config.yml` from this repository will not work. Copy the following lines and add them anywhere in your site's `_config.yml`:
