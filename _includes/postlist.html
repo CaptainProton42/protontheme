@@ -49,6 +49,8 @@
                 {% assign site-base = site-base | replace_first: "http://", "" %}
                 {% assign site-dirs = site-nase | split: "/" %}
                 {% assign site-base = site-dirs[0] %}
+                <a>{{site-base}}</a>
+                <a>{{url-base}}</a>
                 {% if url-base == site.base %}
                     <a href="{{ post.external-url }}" style="font-weight: bold;">View</a>
                 {% else %}
