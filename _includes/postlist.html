@@ -42,7 +42,7 @@
             <div class="card-action">
               {% if post.external-url %}
                 {% assign post-dirs = post.external-url | replace_first: "https://", "" | replace_first: "http://", "" | split: "/" %}
-                {% assign post-base = directories[0] %}
+                {% assign post-base = post-dirs[0] %}
                 {% assign site-dirs = site.url | replace_first: "https://", "" | replace_first: "http://", "" | split: "/" %}
                 {% assign site-base = site-dirs[0] %}
                 <a>{{site-base}}</a>
