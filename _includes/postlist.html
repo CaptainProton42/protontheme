@@ -41,7 +41,21 @@
             
             <div class="card-action">
               {% if post.external-url %}
-              <a href="{{ post.external-url }}" style="font-weight: bold;">View <i class="tiny material-icons">launch</i></a>
+                {% assign url-base = post.external-url | replace_first: "https://", "" %}
+                {% assign url-base = url-base | replace_first: "http://", "" %}
+                {% assign directories = url-base | split: "/" %}
+                {% assign url-base = directories[0] %}
+                {% assign site-base = site.url | replace_first: "https://", "" %}
+                {% assign site-base = site-base | replace_first: "http://", "" %}
+                {% assign site-dirs = site-nase | split: "/" %}
+                {% assign site-base = site-dirs[0] %}
+                {{ url-base }}
+                {{ site-base }}
+                {% if url-base == site.base %}
+                    <a href="{{ post.external-url }}" style="font-weight: bold;">View <i class="tiny material-icons">launch</i></a>
+                {% else %}
+                    <a href="{{ post.url }}" style="font-weight: bold;">View</a>
+                {% endif %}
               {% else %}
               <a href="{{ post.url }}" style="font-weight: bold;">View</a>
               {% endif %}
