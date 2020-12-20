@@ -172,14 +172,23 @@ $emphasis-low: #616161;
      
      .emphasis-high {
          color: $emphasis-high;
+         @media print {
+             color: #000;
+         }
      }
      
      .emphasis-medium {
          color: $emphasis-medium;
+         @media print {
+             color: #000;
+         }
      }
      
      .emphasis-low {
          color: $emphasis-low;
+         @media print {
+             color: #000;
+         }
      }
      
      .z-depth-0 {
