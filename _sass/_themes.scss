@@ -142,7 +142,7 @@ html.theme-red-flames {
     .btn {
         background-color: $highlight !important;
         font-weight: 500 !important;
-        color: transparent !important;
+        color: $background-color;
     }
     
     .highlighter-rouge .highlight {
