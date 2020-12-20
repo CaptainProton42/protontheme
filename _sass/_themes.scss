@@ -147,7 +147,6 @@ $emphasis-low: #616161;
         
     .btn {
         background-color: $highlight !important;
-        color: $emphasis-high !important;
     }
     
     .highlighter-rouge .highlight {
@@ -185,15 +184,24 @@ $emphasis-low: #616161;
      .z-depth-0 {
          @extend .z-depth-0;
          background-color: $elevation-0 !important;
+         .btn {
+             color: $elevation-0 !important;
+         }
      }
      
      .z-depth-1 {
          @extend .z-depth-1;
          background-color: $elevation-1 !important;
+         .btn {
+             color: $elevation-1 !important;
+         }
      }
      
      .z-depth-2 {
          @extend .z-depth-1;
          background-color: $elevation-2 !important;
+         .btn {
+             color: $elevation-2 !important;
+         }
      }
 }
