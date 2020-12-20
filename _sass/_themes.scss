@@ -210,7 +210,11 @@ html.theme-red-flames {
      
      .badge {
          background-color: $highlight;
-     }                 
+     }
+    
+     .footer {
+         background-color: $background-color;
+    }
 }
 
  html.theme-dark-night {
