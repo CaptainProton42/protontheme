@@ -156,6 +156,10 @@ html.theme-red-flames {
     .infobox-title {
         color: $highlight !important;
     }
+    
+    nav {
+        background-color: $background-color;
+    }
 
     .nav-wrapper {
         background-color: rgba($elevation-color, .05);
