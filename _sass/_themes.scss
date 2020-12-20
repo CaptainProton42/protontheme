@@ -134,7 +134,7 @@ html.theme-red-flames {
  * dark-night *
  **************/
 
-@mixin theme($background-color, $elevation-, $emphasis-high, $emphasis-medium, $emphasis-low, $highlight) {
+@mixin theme($background-color, $elevation-color, $emphasis-high, $emphasis-medium, $emphasis-low, $highlight) {
     .page-content {
         background-color: $background-color;
     }
