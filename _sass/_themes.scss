@@ -129,3 +129,59 @@ html.theme-red-flames {
         color: #8fc97e !important;
     }
 }
+
+/**************
+ * dark-night *
+ **************/
+
+$elevation-0: #121212;
+$elevation-1: #202020;
+$elevation-2: #2d2d2d;
+$highlight: #ffc95c;
+$emphasis-high: #dedede;
+$emphasis-medium: #999999;
+$emphasis-low: #616161;
+
+ html.theme-dark-night {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxMzUpICI+PHJlY3QgaWQ9InBhdHRlcm4tYmFja2dyb3VuZCIgd2lkdGg9IjQwMCUiIGhlaWdodD0iNDAwJSIgZmlsbD0icmdiYSgzMiwgMzIsIDMyLDEpIj48L3JlY3Q+IDxwYXRoIGZpbGw9InJnYmEoNDYsIDQ2LCA0NiwxKSIgZD0iTSAtMTAgMzAgaCA2MCB2MiBoLTYweiBNLTEwIC0xMCBoNjAgdjIgaC02MCI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoNDMsIDQzLCA0MywxKSIgZD0ibSAtMTAgMTAgaCA2MCB2MSBoLTYweiBNLTEwIC0zMCBoNjAgdjEgaC02MHoiPjwvcGF0aD48L3BhdHRlcm4+ICA8L2RlZnM+IDxyZWN0IGZpbGw9InVybCgjcGF0dGVybikiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiPjwvcmVjdD48L3N2Zz4=");
+        
+    .btn {
+        background-color: $highlight !important;
+        color: $emphasis-high !important;
+    }
+    
+    .highlighter-rouge .highlight {
+        background-color: $elevation-1 !important;
+    }
+    
+    .infobox {
+        background-color: $elevation-1 !important;
+    }
+    
+    .infobox-title {
+        color: $highlight !important;
+    }
+
+    .nav-wrapper {
+        background-color: $elevation-1 !important;
+    }
+
+    .card-action  a {
+        color: $highlight !important;
+    }
+     
+     .z-depth-0 {
+         @extend .z-depth-0;
+         background-color: $elevation-0 !important;
+     }
+     
+     .z-depth-1 {
+         @extend .z-depth-1;
+         background-color: $elevation-1 !important;
+     }
+     
+     .z-depth-2 {
+         @extend .z-depth-1;
+         background-color: $elevation-2 !important;
+     }
+}
