@@ -134,18 +134,25 @@ html.theme-red-flames {
  * dark-night *
  **************/
 
-@mixin theme($elevation-0, $elevation-1, $elevation-2, $emphasis-high, $emphasis-medium, $emphasis-low, $highlight) {
+@mixin theme($background-color, $elevation-color, $emphasis-high, $emphasis-medium, $emphasis-low, $highlight) {
+    .page-content {
+        background-color: $background-color;
+    }
+    
     .btn {
         background-color: $highlight !important;
         font-weight: 500 !important;
+        color: transparent !important;
     }
     
     .highlighter-rouge .highlight {
-        background-color: $elevation-1 !important;
+        background-color: $elevation-color !important;
+        opacity: 5% !important;
     }
     
     .infobox {
-        background-color: $elevation-1 !important;
+        background-color: $elevation-color !important;
+        opacity: 5% !important;
     }
     
     .infobox-title {
@@ -153,7 +160,8 @@ html.theme-red-flames {
     }
 
     .nav-wrapper {
-        background-color: $elevation-1 !important;
+        background-color: $elevation-color !important;
+        opacity: 5% !important;
     }
 
     .card-action  a {
@@ -179,30 +187,18 @@ html.theme-red-flames {
          @media print {
              color: #000;
          }
-     }
-     
-     .z-depth-0 {
-         @extend .z-depth-0;
-         background-color: $elevation-0 !important;
-         .btn {
-             color: $elevation-0 !important;
-         }
-     }
+    }
      
      .z-depth-1 {
          @extend .z-depth-1;
-         background-color: $elevation-1 !important;
-         .btn {
-             color: $elevation-1 !important;
-         }
+         background-color: $elevation-color !important;
+         opacity: 5% !important;
      }
      
      .z-depth-2 {
          @extend .z-depth-1;
-         background-color: $elevation-2 !important;
-         .btn {
-             color: $elevation-2 !important;
-         }
+         background-color: $elevation-color !important;
+         opacity: 7% !important;
      }
      
      hr {
@@ -220,5 +216,5 @@ html.theme-red-flames {
 
  html.theme-dark-night {
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIj48ZGVmcz48cGF0dGVybiBpZD0icGF0dGVybiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDAsNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgxMzUpICI+PHJlY3QgaWQ9InBhdHRlcm4tYmFja2dyb3VuZCIgd2lkdGg9IjQwMCUiIGhlaWdodD0iNDAwJSIgZmlsbD0icmdiYSgzMiwgMzIsIDMyLDEpIj48L3JlY3Q+IDxwYXRoIGZpbGw9InJnYmEoNDYsIDQ2LCA0NiwxKSIgZD0iTSAtMTAgMzAgaCA2MCB2MiBoLTYweiBNLTEwIC0xMCBoNjAgdjIgaC02MCI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoNDMsIDQzLCA0MywxKSIgZD0ibSAtMTAgMTAgaCA2MCB2MSBoLTYweiBNLTEwIC0zMCBoNjAgdjEgaC02MHoiPjwvcGF0aD48L3BhdHRlcm4+ICA8L2RlZnM+IDxyZWN0IGZpbGw9InVybCgjcGF0dGVybikiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiPjwvcmVjdD48L3N2Zz4=");
-    @include theme(#121212, #ffffff0d, #ffffff12, #dedede, #999999, #616161, #ffc95c);
+    @include theme(#121212, #ffffff, #dedede, #999999, #616161, #ffc95c);
 }
