@@ -204,4 +204,8 @@ $emphasis-low: #616161;
              color: $elevation-2 !important;
          }
      }
+     
+     hr .small {
+         border-color: $emphasis-high;
+     }
 }
