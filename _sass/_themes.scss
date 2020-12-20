@@ -215,6 +215,11 @@ html.theme-red-flames {
      .footer {
          background-color: $background-color;
     }
+    
+    /* Hacky way to get better looking social buttons in dark theme. */
+    .btn-social {
+        background-color: lighten($background-color, .05) !important;
+    }
 }
 
  html.theme-dark-night {
