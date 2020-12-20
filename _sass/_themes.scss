@@ -206,7 +206,7 @@ $emphasis-low: #616161;
      }
      
      hr .small {
-         border-color: $emphasis-high;
+         border-color: $emphasis-high !important;
      }
      
      a {
