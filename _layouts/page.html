@@ -20,7 +20,7 @@ layout: default
         {% endif %}
 
         {% if page.preview-description or page.gh-repo %}
-        <div class="card-content">
+        <div class="card-content emphasis-high">
             {% if page.preview-description %}
             <div class="row">
                 {{ page.preview-description | markdownify }}
@@ -42,4 +42,6 @@ layout: default
     </div>
 </div>
 {% endif %}
+<div class="emphasis-high">
 {{ content }}
+</div>
