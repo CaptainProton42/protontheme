@@ -134,7 +134,7 @@ html.theme-red-flames {
  * dark-night *
  **************/
 
-@mixin theme($background-color, $elevation-color, $emphasis-high, $emphasis-medium, $emphasis-low, $highlight) {
+@mixin theme($background-color, $elevation-, $emphasis-high, $emphasis-medium, $emphasis-low, $highlight) {
     .page-content {
         background-color: $background-color;
     }
@@ -146,13 +146,11 @@ html.theme-red-flames {
     }
     
     .highlighter-rouge .highlight {
-        background-color: $elevation-color !important;
-        opacity: 5% !important;
+        background-color: rgba($elevation-color, .05);
     }
     
     .infobox {
-        background-color: $elevation-color !important;
-        opacity: 5% !important;
+        background-color: rgba($elevation-color, .05);
     }
     
     .infobox-title {
@@ -160,8 +158,7 @@ html.theme-red-flames {
     }
 
     .nav-wrapper {
-        background-color: $elevation-color !important;
-        opacity: 5% !important;
+        background-color: rgba($elevation-color, .05);
     }
 
     .card-action  a {
@@ -191,14 +188,12 @@ html.theme-red-flames {
      
      .z-depth-1 {
          @extend .z-depth-1;
-         background-color: $elevation-color !important;
-         opacity: 5% !important;
+         background-color: rgba($elevation-color, .05);
      }
      
      .z-depth-2 {
          @extend .z-depth-1;
-         background-color: $elevation-color !important;
-         opacity: 7% !important;
+         background-color: rgba($elevation-color, .05);
      }
      
      hr {
