@@ -3,12 +3,12 @@
 {% include navbar.html %}
 
 <div class="container" style="width: 90%;">
-  <div class="card-panel">
+  <div class="card-panel z-depth-0">
     <div class="center-align">
-      <h1>{{ site.title }}</h1>
+      <h1 class="emphasis-high">{{ site.title }}</h1>
       <hr class="small">
       <a class="anchor" name="subtitle"></a>
-      <h4 class="grey-text">{{ site.subtitle }}</h4>
+      <h4 class="emphasis-middle">{{ site.subtitle }}</h4>
     </div>
     <div class="row">
       <div class="col l6 offset-l3 section">
@@ -23,7 +23,7 @@
     </div>
     {% endif %}
     <a class="anchor" name="posts"></a>
-    <div class="center-align">
+    <div class="center-align emphasis-high">
       <h2>{{ page.postlist-title }}</h2>
       {{ page.postlist-description | markdownify }}
     </div>
