@@ -170,6 +170,18 @@ $emphasis-low: #616161;
         color: $highlight !important;
     }
      
+     .emphasis-high {
+         color: $emphasis-high;
+     }
+     
+     .emphasis-medium {
+         color: $emphasis-medium;
+     }
+     
+     .emphasis-low {
+         color: $emphasis-low;
+     }
+     
      .z-depth-0 {
          @extend .z-depth-0;
          background-color: $elevation-0 !important;
