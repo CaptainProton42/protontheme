@@ -236,14 +236,9 @@ a.anchor {
 
 /* Device likely has a touchscreen, disable clicking on preview. */
 @media (hover: none) {
-   .post-preview-link {
+   .post-preview-link:active {
        pointer-events: none;
    }
-    
-    /* Disable inheritance. */
-    .post-preview {
-        pointer-events: all;
-    }
 }
 
 /************************************
