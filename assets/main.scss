@@ -162,10 +162,6 @@ a.anchor {
     @extend .animate__animated, .animate__jello;
 }
 
-.hover-swing:hover {
-    @extend .animate__animated, .animate__swing;
-}
-
 .nav-hover-jello:hover .text{
     @extend .animate__animated, .animate__jello;
 }
