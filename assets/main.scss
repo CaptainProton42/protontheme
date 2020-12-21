@@ -268,3 +268,17 @@ li .page-content {
     width: 100% !important;
   }
 }
+
+/******************************************
+ * Device specific postlist instructions. *
+ ******************************************/
+
+.postlist-instructions::before {
+    content: "Hover";
+}
+
+@media only screen and (max-width: 600px) {
+  .postlist-instructions::before {
+    content: "Tap";
+  }
+}
