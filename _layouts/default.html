@@ -6,7 +6,7 @@
 <div class="container" style="max-width: 70em;">
     <div class="card-panel page-content">
         {% if page.title %}
-        {% if not page.hide-title or page.hide-title == false %}
+        {% if page.hide-title == nil or page.hide-title == false %}
         <div class="valign-wrapper">
             <h1 class="center-align emphasis-high">{{page.title}}</h1>
         </div>
