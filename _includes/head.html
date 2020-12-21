@@ -8,7 +8,7 @@
 {% endif %}
 
 {% if theme %}
-<html class="theme-{{ theme }}">
+<html>
 {% else %}
 <html>
 {% endif %}
@@ -37,4 +37,4 @@
     <title>{{ site.title }}</title>
     {% endif %}
   </head>
-  <body>
+  <body class="theme-{{ theme }}">
