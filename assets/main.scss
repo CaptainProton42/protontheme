@@ -229,6 +229,11 @@ a.anchor {
     right: -0.5em;
 }
 
+.post-tags badge {
+    @extend z-depth-1;
+    font-weight: 500;
+}
+
 /************************************
  * Fix materialize css bullet lists *
  ************************************/
