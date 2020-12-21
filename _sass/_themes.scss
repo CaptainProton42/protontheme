@@ -131,8 +131,8 @@
      }
      
      .badge {
-         background-color: #1f1f1f !important; /* lighten($background-color, 5%) doesn't work for some reason. */
-         color: $highlight-color;
+         background-color: $highlight-color !important;
+         color: $background-color;
      }
     
      .footer {
