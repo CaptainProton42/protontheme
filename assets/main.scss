@@ -236,7 +236,7 @@ a.anchor {
 
 /* Device likely has a touchscreen, disable clicking on preview. */
 @media (hover: none) {
-   .post-preview-link:active {
+   .post-preview-link:hover {
        pointer-events: none;
    }
 }
