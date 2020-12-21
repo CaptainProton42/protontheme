@@ -140,8 +140,11 @@
     }
     
     /* Hacky way to get better looking social buttons in dark theme. */
-    .btn-social img {
-        background-color: rgba($elevation-color, .05); !important;
+    .btn-social {
+        background-color: $background-color !important;
+        img {
+            background-color: rgba($elevation-color, .05); !important;
+        }
     }
 }
 
