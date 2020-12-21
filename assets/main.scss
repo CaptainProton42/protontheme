@@ -32,12 +32,21 @@ img {
     @extend .z-depth-1;
 }
 
+
+/************************
+ * Elevated code blocks *
+ ************************/
+div.highlighter-rouge {
+    @extend .z-depth-1;
+}
+
 /*************************
  * Info Boxes base style *
  *************************/
 
 .infobox {
     @extend .card-panel;
+    @extend .z-depth-1;
 }
 
 .infobox-title {
