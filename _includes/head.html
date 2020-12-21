@@ -16,6 +16,10 @@
     {% if page.usemath and page.usemath == true %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
     {% endif %}
+    
+    {% if page.favicon-emoji %}
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>{{ page.favicon-emoji }}</text></svg>">
+    {% endif %}
 
     <link
     rel="stylesheet"
