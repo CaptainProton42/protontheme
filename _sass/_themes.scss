@@ -208,7 +208,7 @@ html.theme-red-flames {
     .btn {
         background-color: $highlight-color !important;
         font-weight: 500 !important;
-        color: $background-color;
+        color: $background-color; !important
     }
     
     .infobox-title {
