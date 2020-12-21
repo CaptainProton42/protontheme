@@ -131,7 +131,7 @@
      }
      
      .badge {
-         background-color: lighten($background-color, .05) !important;
+         background-color: lighten($background-color, 5%) !important;
          color: $highlight-color;
      }
     
@@ -141,7 +141,7 @@
     
     /* Hacky way to get better looking social buttons in dark theme. */
     .btn-social {
-        background-color: lighten($background-color, .05) !important;
+        background-color: lighten($background-color, 5%) !important;
     }
 }
 
