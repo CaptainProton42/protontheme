@@ -166,6 +166,10 @@ a.anchor {
     @extend .animate__animated, .animate__jello;
 }
 
+.nav-hover-swing:hover .text {
+    @extend .animate__animated, .animate__swing;
+}
+
 /*****************************
  * Interactive post previews *
  *****************************/
