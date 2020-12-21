@@ -3,7 +3,7 @@ window.addEventListener('pageshow', onpageshow);
 function onpageshow() {
     toggle_dark_mode();
     
-   var toggle = document.getElementsById('dark-toggle');
+   var toggle = document.getElementById('dark-toggle');
     toggle.onclick = function() {
         localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark');
         toggle_dark_mode();
@@ -12,6 +12,6 @@ function onpageshow() {
 
 function toggle_dark_mode() {
     localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
-    var toggle = document.getElementsById('dark-toggle');
+    var toggle = document.getElementById('dark-toggle');
     localStorage.getItem('mode') === 'dark' ? toggle.innerHTML = '<i class="material-icons left">brightness_high</i>' : toggle.innerHTML = '<i class="material-icons left">brightness_low</i>';
 }
