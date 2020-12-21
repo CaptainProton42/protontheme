@@ -196,6 +196,7 @@ a.anchor {
     height: 100%;
 }
 
+
 .post-preview:hover .post-summary {
     opacity: 1.0;
 }
@@ -231,6 +232,13 @@ a.anchor {
 
 .post-tags .badge {
     font-weight: 500 !important;
+}
+
+/* Device likely has a touchscreen, disable clicking on preview. */
+@media (hover: none) {
+   .post-preview {
+       pointer-events: none;
+   }
 }
 
 /************************************
