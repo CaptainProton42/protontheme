@@ -170,9 +170,9 @@ A page theme to use for all pages (see documentation above). Will be overridden 
 
 The title of the web *site*. Will be shown on the navbar (if enabled) on all pages.
 
-### `hide-title`
+### `html-title`
 
-If `true` the title will not be displayed on the page. Useful if the title should only show on the browser tab.
+A separate HTML title to include in the head.
 
 ### `favicon-emoji`
 
