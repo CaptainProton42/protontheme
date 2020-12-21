@@ -6,7 +6,7 @@
       <div class="center-align emphasis-high">
         <h4>{{ category[0] }}</h4>
       </div>
-      {% if not categoryName == page.categories[0] %}
+      {% if not category[0] == page.categories[0] %}
       <div class="row">
       {% endif %}
       {% for post in category[1] %}
