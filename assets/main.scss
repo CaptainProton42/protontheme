@@ -239,6 +239,11 @@ a.anchor {
    .post-preview-link {
        pointer-events: none;
    }
+    
+    /* Disable inheritance. */
+    .post-preview {
+        pointer-events: all;
+    }
 }
 
 /************************************
