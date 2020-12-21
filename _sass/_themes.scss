@@ -131,7 +131,8 @@
      }
      
      .badge {
-         background-color: $highlight-color;
+         background-color: $background-color;
+         color: $highlight-color;
      }
     
      .footer {
