@@ -6,9 +6,11 @@
 <div class="container" style="max-width: 70em;">
     <div class="card-panel page-content">
         {% if page.title %}
+        {% if not page.hide-title or page.hide-title == false %}
         <div class="valign-wrapper">
             <h1 class="center-align">{{page.title}}</h1>
         </div>
+        {% endif %}
         {% endif %}
         {{ content }}
     </div>
