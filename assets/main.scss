@@ -239,7 +239,10 @@ a.anchor {
    .post-preview-link {
        pointer-events: none;
    }
-    
+}
+
+/* Remove tags on small devices to free more space for description. */
+@media only screen and (max-width: 600px) {
     .post-tags {
         display: none;
     }
