@@ -13,9 +13,9 @@
         <div class="col s12 m6 l4">
           <div class="card sticky-action z-depth-1">
             {% if post.external-url %}
-            <a href="{{ post.external-url }}">
+            <a class="post-preview-link" href="{{ post.external-url }}">
             {% else %}
-            <a href="{{ post.url }}">
+            <a class="post-preview-link" href="{{ post.url }}">
             {% endif %}
               <div class="card-image waves-effect waves-block waves-light post-preview">
                 <div class="post-summary">
