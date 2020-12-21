@@ -4,11 +4,6 @@
 
 @import "materialize";
 
- // Add a shadow behind code blocks
- div.highlighter-rouge {
-    @extend .z-depth-1;
- }
-
  .highlight {
     background: #fff;
     @extend %vertical-rhythm;
