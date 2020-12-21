@@ -1,6 +1,6 @@
-window.addEventListener('pageshow', onpageshow);
+window.addEventListener('DOMContentLoaded', initialize);
 
-function onpageshow() {
+function initialize() {
     toggle_dark_mode();
     
    var toggle = document.getElementById('dark-toggle');
