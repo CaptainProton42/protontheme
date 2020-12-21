@@ -189,8 +189,8 @@ html.theme-red-flames {
      }
      
      .z-depth-2 {
-         @extend .z-depth-1;
-         background-color: rgba($elevation-color, .05);
+         @extend .z-depth-2;
+         background-color: rgba($elevation-color, .07);
      }
      
      hr {
