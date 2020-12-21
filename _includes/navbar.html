@@ -7,7 +7,7 @@
             {{ site.title }}
           </a>
           <ul class="right">
-            <a class="dark-toggle" href="#" onpageshow="localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Toggle Dark Theme><i class="material-icons left">brightness_high</i></a>
+            <a class="dark-toggle" href="#" onpageshow="localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" onclick="localStorage.setItem('mode', (localStorage.getItem('mode') || 'dark') === 'dark' ? 'light' : 'dark'); localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')" title="Toggle Dark Theme"><i class="material-icons left">brightness_high</i></a>
           </ul>
           {% if site.navbar-links %}
           <ul id="nav-mobile" class="right hide-on-med-and-down">
