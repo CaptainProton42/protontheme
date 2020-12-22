@@ -277,7 +277,7 @@ li .page-content {
     content: "Hover over";
 }
 
-@media only screen and (max-width: 600px) {
+@media (hover: none) {
   .postlist-instructions::before {
     content: "Tap";
   }
