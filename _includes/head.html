@@ -22,9 +22,9 @@
 {% endif %}
 
 {% if page.og-image %}
-{% assign og-image = site.baseurl | append: page.og-image %}
+{% assign og-image = site.url | append: page.og-image %}
 {% else %}
-{% assign og-image = site.baseurl | append: site.og-image %}
+{% assign og-image = site.url | append: site.og-image %}
 {% endif %}
 
 {% if theme %}
