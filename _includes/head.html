@@ -7,13 +7,37 @@
 {% assign theme = site.page-theme %}
 {% endif %}
 
+{% if page.html-title %}
+{% assign og-title = site.title | append: " - " | append: page.html-title %}
+{% elsif page.title %}
+{% assign og-title = site.title | append: " - " | append: page.title %}
+{% else %}
+{% assign og-title = site.title %}
+{% endif %}
+
+{% if page.og-description %}
+{% assign og-description = page.og-description %}
+{% else %}
+{% assign og-description = site.og-description %}
+{% endif %}
+
+{% if page.og-image %}
+{% assign og-image = site.baseurl | append: page.og-image %}
+{% else %}
+{% assign og-image = site.baseurl | append: site.og-image %}
+{% endif %}
+
 {% if theme %}
 <html>
 {% else %}
 <html>
 {% endif %}
   <head>
+    <meta property='og:title' content='{{ og-title }}'/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta property='og:image' content='{{ og-image }}'/>
+    <meta property='og:description' content='{{ og-description }}'/>
+    <meta property='og:url' content='{{ site.baseurl | append: page.url }}'/>
     {% if page.usemath and page.usemath == true %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
     {% endif %}
@@ -31,12 +55,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{site.baseurl}}/assets/js/dark-toggle.js"></script>
-    {% if page.html-title %}
-    <title>{{ site.title }} - {{ page.html-title }}</title>
-    {% elsif page.title %}
-    <title>{{ site.title }} - {{ page.title }}</title>
-    {% else %}
-    <title>{{ site.title }}</title>
-    {% endif %}
+    
+    <title>{{ og-title }}</title>
   </head>
   <body class="theme-{{ theme }} dark">
