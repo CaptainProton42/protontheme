@@ -11,7 +11,7 @@ function initialize() {
 }
 
 function toggle_dark_mode() {
-    localStorage.getItem('mode') === 'dark' ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark');
+    localStorage.getItem('mode') === 'light' ? document.querySelector('body').classList.remove('dark') : document.querySelector('body').classList.add('dark');
     var toggle = document.getElementById('dark-toggle');
-    localStorage.getItem('mode') === 'dark' ? toggle.innerHTML = '<i class="material-icons left">brightness_high</i>' : toggle.innerHTML = '<i class="material-icons left">brightness_4</i>';
+    localStorage.getItem('mode') === 'light' ? toggle.innerHTML = '<i class="material-icons left">brightness_4</i>' : toggle.innerHTML = '<i class="material-icons left">brightness_high</i>';
 }
