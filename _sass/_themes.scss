@@ -66,6 +66,7 @@
 
 @mixin dark-theme($highlight-color) {
     $background-color: #121212;
+    $card-color: #292929;
     $text-color: #ffffff;
     $elevation-color: #ffffff;
     
@@ -145,6 +146,11 @@
         img {
             background-color: rgba($elevation-color, .05) !important;
         }
+    }
+    
+    /* Code highlighting background. */
+    .highlighter-rouge .highlight {
+        background-color: $card-color;
     }
 }
 
