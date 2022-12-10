@@ -70,6 +70,10 @@
     $text-color: #ffffff;
     $elevation-color: #ffffff;
     
+    body {
+        background-color: $background-color;
+    }
+    
     .page-content {
         background-color: $background-color;
     }
